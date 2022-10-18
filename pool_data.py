@@ -9,7 +9,7 @@ from sklearn.linear_model import LinearRegression
 pools = ['ATOM-OSMO','WETH-OSMO',"USDC-OSMO","SCRT-OSMO",'WBTC-OSMO','EVMOS-OSMO', 'JUNO-OSMO', 'STARS-OSMO', 'CRO-OSMO','ATOM-JUNO', 'ATOM-STARS']
 
 #Reading data from coin gecko last 9 months
-DATA_DF = pd.read_csv("data/osmo_price_data_9_months.csv")
+DATA_DF = pd.read_csv("osmo_price_data_9_months.csv")
 DATA_DF = DATA_DF.rename(columns={'timestamp (in IST)': 'DateTime'})
 DATA_DF = DATA_DF.rename(columns={'price_in_usd': 'close'})
 DATA_DF["DateTime"] = DATA_DF["DateTime"].str.split("IST").str.get(0)
